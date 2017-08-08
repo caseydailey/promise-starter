@@ -22,7 +22,6 @@ var Legos = (function(legos){
             request.onload = ()=>{
                 if(request.status === 200){
                     let data = JSON.parse(request.responseText);
-                    console.log("data:", data);
                     resolve(parseData(data));
                 } else {
                     reject(new Error("XMLHttpRequest error", reject));
